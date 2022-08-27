@@ -24,5 +24,5 @@ total = sum(preco)  # Soma todos os valores da lista
 
 # Formato do professor
 
-total = sum([float(y) for x,y in carrinho])
+total = sum([float(y) for x, y in carrinho])
 print(total)
