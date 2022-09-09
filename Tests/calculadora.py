@@ -13,8 +13,8 @@ def soma(x, y):
     ...
     AssertionError: X precisa der int ou float
     """
-    assert isinstance(x, (int, float)), "X precisa der int ou float"
-    assert isinstance(y, (int, float)), "Y precisa der int ou float"
+    assert isinstance(x, (int, float)), "X precisa ser int ou float"
+    assert isinstance(y, (int, float)), "Y precisa ser int ou float"
     return x + y
 
 
