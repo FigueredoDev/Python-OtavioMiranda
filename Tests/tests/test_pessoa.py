@@ -9,6 +9,21 @@ API :
             OK
             404
 '''
+try:
+    import os
+    import sys
+
+    sys.path.append(
+        os.path.abspath(
+            os.path.join(
+                os.path.dirname(__file__),
+                '../src'
+            )
+        )
+    )
+except:     # noqa: E722
+    raise
+
 import unittest
 from unittest.mock import patch
 

@@ -1,3 +1,18 @@
+try:
+    import os
+    import sys
+
+    sys.path.append(
+        os.path.abspath(
+            os.path.join(
+                os.path.dirname(__file__),
+                '../src'
+            )
+        )
+    )
+except:     # noqa: E722
+    raise
+
 import unittest
 
 from calculadora import soma
@@ -29,4 +44,5 @@ class TestCalculadora(unittest.TestCase):
             soma('10', 10)
 
 
-unittest.main(verbosity=2)
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
