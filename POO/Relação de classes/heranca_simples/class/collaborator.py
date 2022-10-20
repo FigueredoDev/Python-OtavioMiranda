@@ -1,7 +1,7 @@
-from people import People
+from person import Person
 
 
-class Collaborator(People):
+class Collaborator(Person):
     def __init__(self, name: str, phone: str, email: str, id: int) -> None:
         super().__init__(name, phone, email)
         self._id = id

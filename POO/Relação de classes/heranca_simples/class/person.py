@@ -1,7 +1,7 @@
 from abc import ABC
 
 
-class People(ABC):
+class Person(ABC):
     def __init__(self, name: str, phone: str, email: str) -> None:
         self._name = name
         self._phone = phone
