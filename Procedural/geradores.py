@@ -1,11 +1,11 @@
 l1 = [x for x in range(10000)]   # Lista comum
-l2 = (x for x in range(10000))   # Ultilizando gerador
+l2 = (x for x in range(10000))   # Utilizando gerador
 
 ##########################
 
-nome = "Jhonata"
-iterador = iter(nome)
-gerador = (letra for letra in iterador)
+name = "Jhonata"
+iterator = iter(name)
+generator = (letra for letra in iterator)
 
 # print(next(gerador))    # Consome a primeira letra do nome
 
@@ -14,15 +14,15 @@ gerador = (letra for letra in iterador)
 
 ###################################
 #   Atividade
-carrinho = []
-carrinho.append(("Camisa", 30))
-carrinho.append(("Blusa", 30))
-carrinho.append(("Short", 50))
+cart = []
+cart.append(("Camisa", 30))
+cart.append(("Blusa", 30))
+cart.append(("Short", 50))
 
-preco = [produto[1] for produto in carrinho]
-total = sum(preco)  # Soma todos os valores da lista
+price = [product[1] for product in cart]
+total = sum(price)  # Soma todos os valores da lista
 
 # Formato do professor
 
-total = sum([float(y) for x, y in carrinho])
+total = sum([float(y) for x, y in cart])  # type: ignore
 print(total)

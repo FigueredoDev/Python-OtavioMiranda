@@ -1,34 +1,34 @@
 from typing import Union
 
 
-class Produto:
-    def __init__(self, nome: str, preco: Union[int, float]) -> None:
-        self.nome = nome
-        self.preco = preco
+class Product:
+    def __init__(self, name: str, price: Union[int, float]) -> None:
+        self.nome = name
+        self.price = price
 
-    def desconto(self, percentual: Union[int, float]) -> None:
-        self.preco -= (self.preco * (percentual / 100))
+    def discount(self, percentage: Union[int, float]) -> None:
+        self.price -= (self.price * (percentage / 100))
 
     # Getter
     @property
-    def preco(self):
-        return self._preco
+    def price(self):
+        return self._price
 
     # Setter
-    @preco.setter
-    def preco(self, valor):
-        if isinstance(valor, str):
-            valor = float(valor.replace("R$", ""))
+    @price.setter
+    def price(self, value):
+        if isinstance(value, str):
+            value = float(value.replace("R$", ""))
 
-        self._preco = valor
+        self._price = value
 
 
-produto1 = Produto("Camiseta", 50)
-produto1.desconto(10)
+product_one = Product("Camiseta", 50)
+product_one.discount(10)
 
-print(produto1.preco)
+print(product_one.price)
 
-produto2 = Produto("Caneca", "R$15")  # type: ignore
-produto2.desconto(10)
+product_two = Product("Caneca", "R$15")  # type: ignore
+product_two.discount(10)
 
-print(produto2.preco)
+print(product_two.price)

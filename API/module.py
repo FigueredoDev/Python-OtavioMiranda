@@ -4,7 +4,7 @@ import os
 books = [
     {
         'id': 1,
-        'title': 'O senhor dos aneis'
+        'title': 'O senhor dos anéis'
     },
     {
         'id': 2,

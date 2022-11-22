@@ -7,4 +7,4 @@ Ambos não repetem valores únicos
 Produto - Ordem importa e repete valores únicos
 """
 
-pessoa = ['Luiz', 'Andre', 'Maria', 'Pedro', 'Adriana']
+people = ['Luiz', 'Andre', 'Maria', 'Pedro', 'Adriana']

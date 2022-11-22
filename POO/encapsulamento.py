@@ -5,32 +5,32 @@ __ private
 """
 
 
-class BaseDeDados:
+class DataBase:
     def __init__(self):
-        self.__dados: dict = {}
+        self.__data: dict = {}
 
     @property
-    def dados(self) -> dict:
-        return self.__dados
+    def data(self) -> dict:
+        return self.__data
 
-    def inserir_clientes(self, id: int, nome: str) -> None:
-        if 'clientes' not in self.__dados:
-            self.__dados['clientes'] = {id: nome}
+    def insert_clients(self, id: int, name: str) -> None:
+        if 'clients' not in self.__data:
+            self.__data['clients'] = {id: name}
         else:
-            self.__dados['clientes'].update({id: nome})
+            self.__data['clients'].update({id: name})
 
-    def lista_clientes(self) -> None:
-        for id, nome in self.__dados['clientes'].items():
+    def list_clients(self) -> None:
+        for id, nome in self.__data['clients'].items():
             print(id, nome)
 
-    def apaga_cliente(self, id: int) -> None:
-        del self.__dados['clientes'][id]
+    def delete_client(self, id: int) -> None:
+        del self.__data['clients'][id]
 
 
-bd = BaseDeDados()
-bd.inserir_clientes(1, "Jhonata")
-bd.inserir_clientes(2, "Otavio")
+bd = DataBase()
+bd.insert_clients(1, "Jhonata")
+bd.insert_clients(2, "Otávio")
 
-bd.apaga_cliente(2)
-bd.lista_clientes()
-print(bd.dados)
+bd.delete_client(2)
+bd.list_clients()
+print(bd.data)

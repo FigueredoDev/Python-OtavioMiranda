@@ -35,11 +35,11 @@ class TestCalculadora(unittest.TestCase):
                 x, y, saida = x_y_saida
                 self.assertEqual(soma(x, y), saida)
 
-    def test_soma_x_nao_eh_int_ou_float_retona_assertionerror(self):
+    def test_soma_x_nao_eh_int_ou_float_retorna_assertionerror(self):
         with self.assertRaises(AssertionError):
             soma('10', 10)
 
-    def test_soma_y_nao_eh_int_ou_float_retona_assertionerror(self):
+    def test_soma_y_nao_eh_int_ou_float_retorna_assertionerror(self):
         with self.assertRaises(AssertionError):
             soma('10', 10)
 
