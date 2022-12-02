@@ -1,4 +1,4 @@
-def soma(x, y):
+def sum_values(x, y):
     """
     Soma
 

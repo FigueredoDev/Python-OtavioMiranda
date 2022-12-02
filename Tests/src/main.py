@@ -1,3 +1,3 @@
-from calculadora import soma
+from Tests.src.calculator import sum_values
 
-print(soma(10, 10))
+print(sum_values(10, 10))

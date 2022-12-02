@@ -15,33 +15,33 @@ except:     # noqa: E722
 
 import unittest
 
-from calculadora import soma
+from calculator import sum_values
 
 
 class TestCalculadora(unittest.TestCase):
-    def test_soma_10_10_saida_20(self):
-        self.assertEqual(soma(10, 10), 20)
+    def test_sum_10_10_exit_20(self):
+        self.assertEqual(sum_values(10, 10), 20)
 
-    def test_soma_varias_saidas(self):
-        x_y_saidas = (
+    def test_sum_various_exits(self):
+        x_y_exits = (
             (10, 10, 20),
             (5, 5, 10),
             (50, 1, 51),
             (-20, 30, 10),
         )
 
-        for x_y_saida in x_y_saidas:
-            with self.subTest(x_y_saida=x_y_saida):
-                x, y, saida = x_y_saida
-                self.assertEqual(soma(x, y), saida)
+        for x_y_exit in x_y_exits:
+            with self.subTest(x_y_exit=x_y_exit):
+                x, y, exit = x_y_exit
+                self.assertEqual(sum_values(x, y), exit)
 
-    def test_soma_x_nao_eh_int_ou_float_retorna_assertionerror(self):
+    def test_sum_x_not_int_or_float_return_AssertionError(self):
         with self.assertRaises(AssertionError):
-            soma('10', 10)
+            sum_values('10', 10)
 
-    def test_soma_y_nao_eh_int_ou_float_retorna_assertionerror(self):
+    def test_sum_y_not_int_or_float_return_AssertionError(self):
         with self.assertRaises(AssertionError):
-            soma('10', 10)
+            sum_values('10', 10)
 
 
 if __name__ == '__main__':
