@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, redirect
 
 app = Flask(__name__)
 
@@ -16,6 +16,11 @@ books = [
         'title': 'Clean Code'
     }
 ]
+
+
+@app.route("/")
+def home():
+    return redirect("http://localhost:5000/books")
 
 
 @app.route('/books', methods=["GET"])
