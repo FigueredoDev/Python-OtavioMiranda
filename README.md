@@ -1,9 +1,9 @@
 # Python3
-- Atividades e Aulas do curso de Python3 na Udemy
+- Activities and Classes of the Python3 course on Udemy
 
-# Observação
-- Não estão listadas todas as aulas do curso em si.
+# Note
+- Not all classes of the course itself are listed.
 
-## Link do curso abaixo:
+## Course link:
 - [Curso de Python 3 do Básico Ao Avançado](https://www.udemy.com/course/python-3-do-zero-ao-avancado/)
 - [Instrutor Luiz Otavio Miranda](https://github.com/luizomf)
